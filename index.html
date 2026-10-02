@@ -213,6 +213,12 @@
       .choice-row { grid-template-columns:1fr; }
       .score-grid { grid-template-columns:1fr; }
     }
+    .timeline a { display:inline-block; margin-top:5px; font-size:12px; color:#176477; text-underline-offset:3px; }
+    .transfer { background:#f0f5f9; padding:10px; border-radius:10px; grid-template-columns:42px 1fr; }
+    .transfer b { font-size:13px; }
+    .rank-grid { display:grid;grid-template-columns:1fr 1fr;gap:12px; }
+    .result-top { flex-wrap:wrap; }
+    @media(max-width:560px) { .rank-grid {grid-template-columns:1fr;} }
   </style>
 </head>
 
@@ -221,15 +227,10 @@
     <section class="hero">
       <div class="eyebrow">🍂 2026 OCT · TEAM ACTIVITY</div>
       <h1>10월 팀 액티비티,<br>어디로 갈까요?</h1>
-      <p>
-        6명이 함께 즐기는 팀 행사 후보입니다. 메인 액티비티 후 스타크래프트 3:3,
-        마지막은 야장/캠핑 분위기의 BBQ로 마무리하는 구성입니다.
-      </p>
+      <p>6명이 함께 즐기는 팀 행사 후보입니다. 코스별 일정을 확인하고<br>가고 싶은 곳을 1순위와 2순위로 선택해주세요.</p>
       <div class="hero-kpis">
         <span class="pill">👥 6명</span>
         <span class="pill">💰 액티비티 예산 36만원</span>
-        <span class="pill">🖥️ 스타크래프트 팀전 포함</span>
-        <span class="pill">🥩 석식 예산 별도</span>
       </div>
     </section>
 
@@ -241,56 +242,44 @@
     <section class="grid">
       <article class="plan" data-choice="A">
         <div class="plan-head">
-          <span class="tag a">A안 · 도심형</span>
+          <span class="tag a">A안</span>
           <h2>홍대 서바이벌 → 스타 → 한강 BBQ</h2>
           <p class="summary">이동이 짧고 3:3 경쟁구도가 가장 자연스러운 코스</p>
         </div>
-        <div class="timeline">
-          <div class="step"><div class="time">14:30</div><div><b>레이저아레나 홍대점</b><small>3:3 팀전 · 약 1~1.5시간</small></div></div>
-          <div class="step"><div class="time">16:15</div><div><b>T1 베이스캠프 · 스타크래프트</b><small>헌터 3:3 · BO3 추천</small></div></div>
-          <div class="step"><div class="time">18:15</div><div><b>와이키키마켓 · 한강 BBQ</b><small>차량 약 10~15분 · 망원 한강변</small></div></div>
-        </div>
-        <div class="meta">
+        <div class="timeline"><div class="step"><div class="time">14:30</div><div><b>레이저아레나 홍대점</b><small>16:00까지 · 레이저 서바이벌 약 1.5시간</small><a href="https://www.instagram.com/laserarena_hongdae.crew/" target="_blank" rel="noopener noreferrer">매장 SNS ↗</a></div></div><div class="step transfer"><div class="time">16:00</div><div><b>도보 약 10~15분</b><small>와우산로 → 양화로 · 16:15 도착 예정</small></div></div><div class="step"><div class="time">16:15</div><div><b>T1 베이스캠프 · 스타크래프트</b><small>17:45까지 · 헌터 3:3 · 약 1.5시간</small><a href="https://www.instagram.com/t1basecamp_hongdae/" target="_blank" rel="noopener noreferrer">매장 SNS ↗</a></div></div><div class="step transfer"><div class="time">17:45</div><div><b>차량·택시 약 20~30분</b><small>난지한강공원 방면 · 주차 후 도보 여유 포함</small></div></div><div class="step"><div class="time">18:15</div><div><b>와이키키마켓 · 한강 BBQ</b><small>난지한강공원 · 예약 회차에 따라 시작 시각 조정</small><a href="https://www.instagram.com/waikiki_market/" target="_blank" rel="noopener noreferrer">매장 SNS ↗</a></div></div><p class="hint">이동 시간은 위치를 바탕으로 잡은 일정 계획용 예상치이며, 당일 교통·대기·주차 상황에 따라 달라집니다.</p></div>
+<div class="meta">
           <div>예상 액티비티비<strong>약 14~16만원</strong></div>
           <div>날씨 영향<strong>활동 실내 · BBQ 야외</strong></div>
         </div>
-        <button class="vote-btn" onclick="pick('A')">A안 선택</button>
+        <button class="vote-btn" onclick="pick('A')">A안 1순위로 선택</button>
       </article>
 
       <article class="plan" data-choice="B">
         <div class="plan-head">
-          <span class="tag b">B안 · 안정형</span>
+          <span class="tag b">B안</span>
           <h2>하남 스몹 → 스타 → 캠핑 BBQ</h2>
           <p class="summary">비가 와도 일정 유지가 쉽고 활동량이 가장 많은 코스</p>
         </div>
-        <div class="timeline">
-          <div class="step"><div class="time">14:00</div><div><b>스몹 하남</b><small>클라이밍·스포츠·체험 종목</small></div></div>
-          <div class="step"><div class="time">16:45</div><div><b>SRP PC방 미사점</b><small>스타크래프트 3:3 · 약 1.5시간</small></div></div>
-          <div class="step"><div class="time">18:30</div><div><b>만돈만리 · 캠핑 BBQ</b><small>차량 약 10~20분 · 텐트/파라솔석</small></div></div>
-        </div>
-        <div class="meta">
+        <div class="timeline"><div class="step"><div class="time">14:00</div><div><b>스몹 하남</b><small>16:00까지 · 스타필드 하남 · 약 2시간</small><a href="https://www.smob.co.kr/" target="_blank" rel="noopener noreferrer">공식 홈페이지 ↗</a></div></div><div class="step transfer"><div class="time">16:00</div><div><b>차량·택시 약 15~25분</b><small>미사역 방면 · 퇴장·주차·입장 여유 20분 추가</small></div></div><div class="step"><div class="time">16:45</div><div><b>SRP PC방 미사점</b><small>18:15까지 · 스타크래프트 3:3 · 약 1.5시간</small><a href="https://map.naver.com/p/search/SRP%20PC%EB%B0%A9%20%EB%AF%B8%EC%82%AC%EC%A0%90" target="_blank" rel="noopener noreferrer">지도·매장 검색 ↗</a></div></div><div class="step transfer"><div class="time">18:15</div><div><b>차량·택시 약 20~30분</b><small>하남 검단산로 방면 · 주차 포함 30분 확보</small></div></div><div class="step"><div class="time">18:45</div><div><b>만돈만리 · 캠핑 BBQ</b><small>검단산로 244 · 텐트·야외석 예약 확인</small><a href="https://app.catchtable.co.kr/ct/shop/mandonmanri" target="_blank" rel="noopener noreferrer">매장·예약 안내 ↗</a></div></div><p class="hint">이동 시간은 위치를 바탕으로 잡은 일정 계획용 예상치이며, 당일 교통·대기·주차 상황에 따라 달라집니다.</p></div>
+<div class="meta">
           <div>예상 액티비티비<strong>약 20~23만원</strong></div>
           <div>날씨 영향<strong>활동 실내 · BBQ 야외</strong></div>
         </div>
-        <button class="vote-btn" onclick="pick('B')">B안 선택</button>
+        <button class="vote-btn" onclick="pick('B')">B안 1순위로 선택</button>
       </article>
 
       <article class="plan" data-choice="C">
         <div class="plan-head">
-          <span class="tag c">C안 · 가을형</span>
+          <span class="tag c">C안</span>
           <h2>강화 루지 → 스타 → 강화 BBQ</h2>
           <p class="summary">10월 드라이브와 야외 분위기를 가장 잘 살리는 코스</p>
         </div>
-        <div class="timeline">
-          <div class="step"><div class="time">13:30</div><div><b>강화 루지</b><small>3회권 기준 · 개인순위 합산 가능</small></div></div>
-          <div class="step"><div class="time">16:00</div><div><b>우리피씨방 · 길상면</b><small>스타크래프트 3:3 · 연석 사전확인</small></div></div>
-          <div class="step"><div class="time">18:00</div><div><b>바베큐캠프</b><small>차량 30분 이내 예상 · 야외/캠핑 분위기</small></div></div>
-        </div>
-        <div class="meta">
+        <div class="timeline"><div class="step"><div class="time">13:30</div><div><b>강화 루지</b><small>15:30까지 · 3회권 기준 · 대기 포함 약 2시간</small><a href="https://www.ganghwa-resort.co.kr/" target="_blank" rel="noopener noreferrer">공식 홈페이지 ↗</a></div></div><div class="step transfer"><div class="time">15:30</div><div><b>차량·택시 약 10~20분</b><small>길상면 온수리권 기준 · 주차·입장 여유 10분 추가</small></div></div><div class="step"><div class="time">16:00</div><div><b>우리피씨방 · 길상면</b><small>17:30까지 · 스타크래프트 3:3 · 영업·위치·연석 재확인</small><a href="https://map.naver.com/p/search/%EA%B0%95%ED%99%94%20%EA%B8%B8%EC%83%81%EB%A9%B4%20%EC%9A%B0%EB%A6%AC%ED%94%BC%EC%94%A8%EB%B0%A9" target="_blank" rel="noopener noreferrer">지도·매장 검색 ↗</a></div></div><div class="step transfer"><div class="time">17:30</div><div><b>차량·택시 약 15~25분</b><small>불은면 방면 · 주차 포함 30분 확보 / PC방 확정 후 재산정</small></div></div><div class="step"><div class="time">18:00</div><div><b>바베큐캠프</b><small>덕진로227번길 49 · 영업일·야외석 운영 사전 확인</small><a href="https://map.naver.com/p/search/%EA%B0%95%ED%99%94%20%EB%B0%94%EB%B2%A0%ED%81%90%EC%BA%A0%ED%94%84" target="_blank" rel="noopener noreferrer">지도·매장 검색 ↗</a></div></div><p class="hint">이동 시간은 위치를 바탕으로 잡은 일정 계획용 예상치이며, 당일 교통·대기·주차 상황에 따라 달라집니다.</p></div>
+<div class="meta">
           <div>예상 액티비티비<strong>약 25~27만원</strong></div>
           <div>날씨 영향<strong>보통</strong></div>
         </div>
-        <button class="vote-btn" onclick="pick('C')">C안 선택</button>
+        <button class="vote-btn" onclick="pick('C')">C안 1순위로 선택</button>
       </article>
     </section>
 
@@ -300,18 +289,10 @@
         <p class="sub">같은 이름으로 다시 제출하면 기존 선택과 의견이 업데이트됩니다.</p>
 
         <div class="field">
-          <label for="name">이름 / 닉네임</label>
-          <input id="name" maxlength="20" placeholder="예: 대환" autocomplete="name" />
+          <label for="name">이름</label><select id="name" required><option value="">본인 이름을 선택해주세요</option><option value="김정훈">김정훈</option><option value="김상기">김상기</option><option value="박상현">박상현</option><option value="박찬균">박찬균</option><option value="김권수">김권수</option><option value="김대환">김대환</option></select>
         </div>
 
-        <div class="field">
-          <label>선호 코스</label>
-          <div class="choice-row">
-            <button class="choice" data-v="A" onclick="pick('A')">A · 홍대</button>
-            <button class="choice" data-v="B" onclick="pick('B')">B · 하남</button>
-            <button class="choice" data-v="C" onclick="pick('C')">C · 강화</button>
-          </div>
-        </div>
+        <div class="rank-grid"><div class="field"><label for="firstChoice">1안 · 1순위 (2점)</label><select id="firstChoice" required><option value="">코스를 선택해주세요</option><option value="A">A · 홍대</option><option value="B">B · 하남</option><option value="C">C · 강화</option></select></div><div class="field"><label for="secondChoice">2안 · 2순위 (1점)</label><select id="secondChoice" required><option value="">코스를 선택해주세요</option><option value="A">A · 홍대</option><option value="B">B · 하남</option><option value="C">C · 강화</option></select></div></div><p class="hint">서로 다른 두 코스를 선택해주세요. 한 명당 총 3점이 반영됩니다.</p>
 
         <div class="field">
           <label for="comment">의견 / 요청사항 <span style="font-weight:400;color:#8992a3">(선택)</span></label>
@@ -326,41 +307,31 @@
 
       <div class="panel">
         <h3>공유 투표 현황</h3>
-        <p class="sub">총 6명 기준 · 저장 후 즉시 갱신 · 다른 팀원의 투표는 15초마다 반영됩니다.</p>
+        <p class="sub">1순위 2점 + 2순위 1점 · 총 6명 / 최대 18점<br>저장 후 즉시 갱신 · 다른 팀원의 투표는 15초마다 반영됩니다.</p>
 
         <div class="total"><strong id="totalVotes">0</strong><span>/ 6명 참여</span></div>
 
         <div class="result-row">
-          <div class="result-top"><b>A · 홍대</b><span id="countA">0표 · 0%</span></div>
+          <div class="result-top"><b>A · 홍대</b><span id="countA">0점 · 0%</span></div>
           <div class="track"><div class="bar a" id="barA"></div></div>
         </div>
         <div class="result-row">
-          <div class="result-top"><b>B · 하남</b><span id="countB">0표 · 0%</span></div>
+          <div class="result-top"><b>B · 하남</b><span id="countB">0점 · 0%</span></div>
           <div class="track"><div class="bar b" id="barB"></div></div>
         </div>
         <div class="result-row">
-          <div class="result-top"><b>C · 강화</b><span id="countC">0표 · 0%</span></div>
+          <div class="result-top"><b>C · 강화</b><span id="countC">0점 · 0%</span></div>
           <div class="track"><div class="bar c" id="barC"></div></div>
         </div>
 
-        <div class="comment-list">
+        <p id="scoreSummary" class="hint" aria-live="polite">아직 투표가 없습니다.</p><div class="comment-list">
           <b style="font-size:14px">팀원 의견</b>
           <div id="comments" class="empty">아직 등록된 의견이 없습니다.</div>
         </div>
       </div>
     </section>
 
-    <section class="score">
-      <h3>🏆 당일 미니 팀대항전 아이디어</h3>
-      <div class="score-grid">
-        <div class="score-item"><small>메인 액티비티</small><b>승리팀 3점</b></div>
-        <div class="score-item"><small>스타 1경기</small><b>1점</b></div>
-        <div class="score-item"><small>스타 2경기</small><b>1점</b></div>
-        <div class="score-item"><small>스타 결정전</small><b>2점</b></div>
-      </div>
-    </section>
-
-    <div class="footer">
+<div class="footer">
       이 페이지는 팀 내부 일정 선택용입니다. 실제 영업시간·요금·예약 가능 여부는 예약 전 최종 확인이 필요합니다.<br>
       투표와 의견은 공유 저장되며, 재접속해도 결과를 확인할 수 있습니다.
     </div>
@@ -373,7 +344,9 @@ const SUPABASE_URL = 'https://emmdvawbcektandwfhpt.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_vn1pdKIj4BiWV2UBTZuNrQ_0X8I9Qzs';
 const POLL_ID = 'team-activity-2026-10';
 const NAME_KEY = 'teamActivityMyName';
-let selected = null;
+const MEMBERS = ["김정훈","김상기","박상현","박찬균","김권수","김대환"];
+let formDirty = false;
+let loadPromise = null;
 let currentVotes = [];
 let loading = false;
 let saving = false;
@@ -387,23 +360,28 @@ function toast(message) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => el('toast').classList.remove('show'), 4500);
 }
-function normalizeName(value) { return value.normalize('NFKC').trim().replace(/\s+/g, ' '); }
-function pick(choice, scroll = true) {
-  if (!['A','B','C'].includes(choice)) return;
-  selected = choice;
-  document.querySelectorAll('.choice').forEach(button => {
-    button.classList.toggle('active', button.dataset.v === choice);
-    button.setAttribute('aria-pressed', String(button.dataset.v === choice));
-  });
-  document.querySelectorAll('.plan').forEach(card => card.classList.toggle('selected', card.dataset.choice === choice));
-  if (scroll) el('votePanel').scrollIntoView({behavior: 'smooth', block: 'start'});
+function syncChoices() {
+  const first = el('firstChoice').value;
+  const second = el('secondChoice').value;
+  for (const option of el('firstChoice').options) option.disabled = !!option.value && option.value === second;
+  for (const option of el('secondChoice').options) option.disabled = !!option.value && option.value === first;
+  document.querySelectorAll('.plan').forEach(card => card.classList.toggle('selected', card.dataset.choice === first));
+}
+function pick(choice) {
+  if (saving || !['A','B','C'].includes(choice)) return;
+  if (el('secondChoice').value === choice) el('secondChoice').value = '';
+  el('firstChoice').value = choice;
+  formDirty = true;
+  syncChoices();
+  el('votePanel').scrollIntoView({behavior:'smooth',block:'start'});
 }
 function restoreMyVote() {
-  const mine = currentVotes.find(vote => vote.voter_name === normalizeName(el('name').value));
-  if (mine) {
-    pick(mine.choice, false);
-    el('comment').value = mine.comment || '';
-  }
+  const mine = currentVotes.find(vote => vote.voter_name === el('name').value);
+  el('firstChoice').value = mine?.choice || '';
+  el('secondChoice').value = mine?.second_choice || '';
+  el('comment').value = mine?.comment || '';
+  formDirty = false;
+  syncChoices();
 }
 function safeText(value) {
   return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
@@ -433,53 +411,65 @@ async function loadVotes(restore = false) {
   if (loading) return;
   loading = true;
   try {
-    const query = new URLSearchParams({select: 'voter_name,choice,comment,updated_at', poll_id: `eq.${POLL_ID}`, order: 'updated_at.desc'});
+    const query = new URLSearchParams({select: 'voter_name,choice,second_choice,comment,updated_at', poll_id: `eq.${POLL_ID}`, order: 'updated_at.desc'});
     currentVotes = await requestAPI(`team_votes?${query}`) || [];
     renderResults();
     setStatus(true);
     el('lastUpdated').textContent = '최근 확인: ' + new Date().toLocaleString('ko-KR', {timeZone: 'Asia/Seoul', hour12: false});
-    if (restore) restoreMyVote();
+    if (restore && !formDirty) restoreMyVote();
   } catch {
     setStatus(false);
     // Keep the last successful results visible when the network is interrupted.
   } finally { loading = false; }
 }
 function renderResults() {
-  const counts = {A:0, B:0, C:0};
-  currentVotes.forEach(vote => { if (vote.choice in counts) counts[vote.choice]++; });
-  const total = currentVotes.length;
-  el('totalVotes').textContent = total;
-  ['A','B','C'].forEach(choice => {
-    const percent = total ? Math.round(counts[choice] / total * 100) : 0;
-    el(`count${choice}`).textContent = `${counts[choice]}표 · ${percent}%`;
-    el(`bar${choice}`).style.width = `${percent}%`;
+  const scores = {A:0,B:0,C:0}, first = {A:0,B:0,C:0}, second = {A:0,B:0,C:0};
+  currentVotes.forEach(vote => {
+    if (vote.choice in scores) { scores[vote.choice] += 2; first[vote.choice]++; }
+    if (vote.second_choice in scores && vote.second_choice !== vote.choice) { scores[vote.second_choice]++; second[vote.second_choice]++; }
   });
+  const total = Object.values(scores).reduce((a,b)=>a+b,0);
+  el('totalVotes').textContent = currentVotes.length;
+  ['A','B','C'].forEach(choice => {
+    const percent = total ? Math.round(scores[choice]/total*100) : 0;
+    el('count'+choice).textContent = scores[choice]+'점 · '+percent+'% (1순위 '+first[choice]+'명 / 2순위 '+second[choice]+'명)';
+    el('bar'+choice).style.width = percent+'%';
+  });
+  const best = Math.max(...Object.values(scores));
+  const leaders = Object.keys(scores).filter(k=>scores[k]===best).map(k=>k+'안').join(' · ');
+  el('scoreSummary').textContent = total ? '합계 '+total+'점 / 최대 18점 · '+(Object.values(scores).filter(v=>v===best).length>1?'공동 1위: ':'현재 1위: ')+leaders : '아직 투표가 없습니다.';
   const comments = currentVotes.filter(vote => vote.comment?.trim());
   el('comments').className = comments.length ? '' : 'empty';
   el('comments').innerHTML = comments.length ? comments.map(vote =>
-    `<div class="comment"><div><span class="who">${safeText(vote.voter_name)}</span><span class="pick">· ${safeText(vote.choice)}안</span></div><div class="text" style="white-space:pre-wrap">${safeText(vote.comment)}</div></div>`
+    '<div class="comment"><div><span class="who">'+safeText(vote.voter_name)+'</span><span class="pick">· 1순위 '+safeText(vote.choice)+'안 / 2순위 '+safeText(vote.second_choice || '미선택')+(vote.second_choice?'안':'')+'</span></div><div class="text" style="white-space:pre-wrap">'+safeText(vote.comment)+'</div></div>'
   ).join('') : '아직 등록된 의견이 없습니다.';
 }
 async function submitVote() {
   if (saving) return;
-  const name = normalizeName(el('name').value);
+  const name = el('name').value;
+  const selected = el('firstChoice').value;
+  const second = el('secondChoice').value;
   const comment = el('comment').value.trim();
-  if (!name || [...name].length > 20) return toast('이름 또는 닉네임을 1~20자로 입력해주세요.');
-  if (!selected) return toast('A/B/C 중 한 코스를 선택해주세요.');
+  if (!MEMBERS.includes(name)) return toast('본인 이름을 선택해주세요.');
+  if (!['A','B','C'].includes(selected) || !['A','B','C'].includes(second)) return toast('1순위와 2순위를 모두 선택해주세요.');
+  if (selected === second) return toast('서로 다른 두 코스를 선택해주세요.');
   if ([...comment].length > 300) return toast('의견은 300자 이내로 입력해주세요.');
   saving = true;
   const button = el('submitBtn');
   button.disabled = true;
+  ['name','firstChoice','secondChoice','comment'].forEach(id=>el(id).disabled=true);
   button.textContent = '공유 저장 중…';
   try {
     await requestAPI('team_votes?on_conflict=poll_id,voter_name', {
       method: 'POST',
       headers: {Prefer: 'resolution=merge-duplicates,return=minimal'},
-      body: JSON.stringify({poll_id: POLL_ID, voter_name: name, choice: selected, comment})
+      body: JSON.stringify({poll_id: POLL_ID, voter_name: name, choice: selected, second_choice: second, comment})
     });
     storageSet(NAME_KEY, name);
     el('name').value = name;
     toast('투표가 공유 저장되었습니다.');
+    formDirty = false;
+    while (loading) await new Promise(resolve=>setTimeout(resolve,50));
     await loadVotes();
   } catch (error) {
     const message = error.message.includes('최대 6명') ? error.message : '공유 저장을 확인하지 못했습니다. 입력을 유지했으니 같은 이름으로 다시 제출해주세요.';
@@ -487,12 +477,14 @@ async function submitVote() {
   } finally {
     saving = false;
     button.disabled = false;
+    ['name','firstChoice','secondChoice','comment'].forEach(id=>el(id).disabled=false);
     button.textContent = '투표 저장하기';
   }
 }
-el('name').value = storageGet(NAME_KEY);
+el('name').value = MEMBERS.includes(storageGet(NAME_KEY)) ? storageGet(NAME_KEY) : '';
 el('name').addEventListener('change', restoreMyVote);
-document.querySelectorAll('.choice').forEach(button => button.setAttribute('aria-pressed', 'false'));
+['firstChoice','secondChoice'].forEach(id=>el(id).addEventListener('change',()=>{formDirty=true;syncChoices();}));
+el('comment').addEventListener('input',()=>{formDirty=true;});
 loadVotes(true);
 setInterval(() => { if (!document.hidden && !saving) loadVotes(); }, 15000);
 document.addEventListener('visibilitychange', () => { if (!document.hidden) loadVotes(); });
@@ -501,3 +493,4 @@ window.addEventListener('focus', () => loadVotes());
 </script>
 </body>
 </html>
+
